@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ Bandards Portfolio</title>
+    <title>DJ Bandards | Portfolio</title>
+    <meta name="description" content="Portfolio of DJ Bandards — student coder, STEM instructor, and youth leader.">
 
     <link rel="stylesheet" href="profilo.css">
     <script src="profilo.js" defer></script>
@@ -18,13 +19,16 @@
         <h2>DJ BANDARDS.</h2>
 
         <div class="links">
+            <a href="#home">Home</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#work">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <section class="hero">
+    <!-- HOME -->
+    <section id="home" class="hero">
         <div class="left">
             <h1>LEADING<br>CODING<br>CREATING<br>IMPACT.</h1>
         </div>
@@ -35,36 +39,51 @@
                 and youth leader passionate about technology,
                 innovation, and helping others grow.
             </p>
+            <a href="#work" class="project-btn">See My Work</a>
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
         <h2>About Me</h2>
 
-        <p>
-            I'm DJ Bandards, a Park Tudor High School student
-            with experience in coding, STEM education,
-            leadership programs, and community service.
-            As a Coding/STEM Instructor and Camp Counselor,
-            I helped students learn technology skills while
-            creating a positive learning environment. I enjoy
-            problem-solving, public speaking, mentoring youth,
-            and building projects that make an impact.
-        </p>
+        <div class="about-grid">
+
+            <div class="profile-pic-wrap">
+            
+                <img src="profile.jpg.JPEG" alt="Photo of DJ Bandards" class="profile-pic" id="profilePic">
+                <div class="profile-fallback" id="profileFallback">DJ</div>
+            </div>
+
+            <p>
+                I'm DJ Bandards, a Park Tudor High School student
+                with experience in coding, STEM education,
+                leadership programs, and community service.
+                As a Coding/STEM Instructor and Camp Counselor,
+                I helped students learn technology skills while
+                creating a positive learning environment. I enjoy
+                problem-solving, public speaking, mentoring youth,
+                and building projects that make an impact.
+            </p>
+
+        </div>
     </section>
+
+    <!-- SKILLS -->
     <section id="skills">
-    <h2>Skills</h2>
+        <h2>Skills</h2>
 
-    <div class="skills-grid">
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">Leadership</div>
-        <div class="skill-card">Problem Solving</div>
-        <div class="skill-card">Learning</div>
-    </div>
-</section>
+        <div class="skills-grid">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Leadership</div>
+            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">Public Speaking</div>
+        </div>
+    </section>
 
+    <!-- PROJECTS -->
     <section id="work">
         <h2>Featured Projects</h2>
 
@@ -73,29 +92,32 @@
             <div class="card">
                 <h6>01</h6>
                 <h3>Story Game</h3>
-                <p>We had to make a game where there were multiple storylines to choose from.</p>
+                <p>A branching-narrative game built with HTML, CSS, and JavaScript where the
+                    player's choices lead to multiple different storylines and endings.</p>
 
-                <a href="https://djband15.github.io/int-u3-project-23-24-starter-code/" target="_blank" class="project-btn">
+                <a href="https://djband15.github.io/int-u3-project-23-24-starter-code/" target="_blank" rel="noopener" class="project-btn">
                     View Project
                 </a>
             </div>
 
             <div class="card">
                 <h6>02</h6>
-                <h3>Project Title</h3>
-                <p>Project description goes here.</p>
+                <h3>Women's Empowerment Site</h3>
+                <p>A website built to raise awareness and support a cause, focused on clear
+                    messaging, layout design, and accessible content.</p>
 
-                <a href="YOUR_LINK_HERE" target="_blank" class="project-btn">
+                <a href="https://djband15.github.io/int-u2-project-starter-code-1/" target="_blank" rel="noopener" class="project-btn">
                     View Project
                 </a>
             </div>
 
             <div class="card">
                 <h6>03</h6>
-                <h3>Project Title</h3>
-                <p>Project description goes here.</p>
+                <h3>Monster Clicker Game</h3>
+                <p>An interactive clicker game built using AI-assisted prompting to practice
+                    breaking a project into features and debugging generated code.</p>
 
-                <a href="YOUR_LINK_HERE" target="_blank" class="project-btn">
+                <a href="YOUR_LINK_HERE" target="_blank" rel="noopener" class="project-btn">
                     View Project
                 </a>
             </div>
@@ -103,8 +125,25 @@
         </div>
     </section>
 
+    <!-- CITATIONS -->
+    <section id="citations">
+        <h2>Sources &amp; Citations</h2>
+        <p class="citation-intro">Outside resources used to build this portfolio:</p>
+
+        <ul class="citation-list">
+            <li>
+                <strong>Font:</strong> "Space Grotesk" by Florian Karsten, hosted via
+                <a href="https://fonts.google.com/specimen/Space+Grotesk" target="_blank" rel="noopener">Google Fonts</a>,
+                licensed under the SIL Open Font License. Used site-wide for all text
+                to give the portfolio a modern, technical feel.
+            </li>
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact">
         <h2>Let's Connect</h2>
+        <p class="contact-intro">Have a question or want to work together? Reach out below.</p>
 
         <div class="contact-box">
 
@@ -112,13 +151,27 @@
                 Email Me
             </a>
 
-            <a href="https://www.linkedin.com/in/dj-bandards-908b06415/" target="_blank" class="contact-btn linkedin">
+            <a href="https://www.linkedin.com/in/dj-bandards-908b06415/" target="_blank" rel="noopener" class="contact-btn linkedin">
                 LinkedIn
             </a>
 
         </div>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xojokzry" method="POST">
+            <div class="form-row">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" id="formSubmitBtn">Send Message</button>
+            <p class="form-note" id="formStatus">Messages are sent directly to my email.</p>
+        </form>
     </section>
+
+    <footer>
+        <p>&copy; 2026 DJ Bandards. Built with HTML, CSS &amp; JavaScript.</p>
+    </footer>
 
 </body>
 
-</html>>
+</html>
