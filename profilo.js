@@ -6,7 +6,7 @@ document.addEventListener("mousemove", (e) => {
     glow.style.top = e.clientY + "px";
 
     const textElements = document.querySelectorAll(
-        "h1, h2, h3, p, h6, a"
+        "h1, h2, h3, p, h6, a, div"
     );
 
     textElements.forEach(el => {
