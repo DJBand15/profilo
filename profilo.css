@@ -130,6 +130,14 @@ section h2 {
     flex-wrap: wrap;
 }
 
+.profile-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
 .profile-pic-wrap {
     position: relative;
     width: 220px;
@@ -170,6 +178,23 @@ section h2 {
 
 .profile-pic-wrap.no-image .profile-pic {
     display: none;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(8, 236, 198);
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    text-align: center;
+    transition: .3s;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(8, 236, 198, .4);
 }
 
 /* PROJECTS */
