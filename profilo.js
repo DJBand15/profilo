@@ -41,9 +41,47 @@ function updateGlow() {
     ticking = false;
 }
 
+// ---------- CONTACT FORM ----------
+const contactForm = document.getElementById("contactForm");
+const formStatus = document.getElementById("formStatus");
+const formSubmitBtn = document.getElementById("formSubmitBtn");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        formSubmitBtn.disabled = true;
+        formSubmitBtn.textContent = "Sending...";
+        formStatus.textContent = "";
+        formStatus.style.color = "#6e6e6e";
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: { "Accept": "application/json" }
+            });
+
+            if (response.ok) {
+                formStatus.textContent = "Thanks! Your message has been sent — I'll get back to you soon.";
+                formStatus.style.color = "rgb(8, 236, 198)";
+                contactForm.reset();
+            } else {
+                throw new Error("Form submission failed");
+            }
+        } catch (err) {
+            formStatus.textContent = "Something went wrong. Please email me directly instead.";
+            formStatus.style.color = "#ff6b6b";
+        } finally {
+            formSubmitBtn.disabled = false;
+            formSubmitBtn.textContent = "Send Message";
+        }
+    });
+}
+
 // ---------- PROFILE PICTURE FALLBACK ----------
-// If profile.jpg (or whatever file the <img src> points to) can't be
-// found, show the "DJ" initials circle instead so the page never looks broken.
 const profilePic = document.getElementById("profilePic");
 const profileWrap = profilePic ? profilePic.closest(".profile-pic-wrap") : null;
 
